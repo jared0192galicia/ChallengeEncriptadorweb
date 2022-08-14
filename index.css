@@ -1,0 +1,69 @@
+/* Estilos de index */
+* {
+    background-color: gainsboro;
+    /* background-color: aliceblue; */
+}
+#logo{
+    background-color: gainsboro;
+    margin-left: 80px;
+    margin-top: 30px;
+}
+section img{
+    background-color: white;
+    max-width: 285px;
+    /* max-height: 250px; */
+}
+#muneco {
+    /* 3 usados para mov con todo y margen */
+    position: absolute;
+    top: 0px;
+    left: 75%;
+    height: 420px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    margin-right: 20px;
+}
+
+#muneco h1{
+    background-color: white;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+#waring{
+    position: absolute;
+    top: 76%;
+    left: 16%;
+}
+section p{
+    position: absolute;
+    top: 76%;
+    left: 18%;
+}
+section button{
+    color: white;
+    font-size: 18px;
+    border-radius: 15px;
+    background-color: #0A3871;
+    font-weight: lighter;
+}
+.encrip {
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    padding: 8px 100px;
+
+}
+.desencrip {
+    background-color: lightgray;
+    border-color: #0A3871;
+    color: #0A3871;
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    padding: 8px 87px;
+}
