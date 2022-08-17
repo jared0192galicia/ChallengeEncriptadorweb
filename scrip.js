@@ -2,15 +2,19 @@
 
 var buttEncrip = document.getElementById('encrip');
 var buttDesencrip = document.getElementById("desencrip");
+var buttCopy = document.getElementById("copy");
 
 var section = document.getElementsByClassName("mostrar-txt");
 var gato = document.getElementsByClassName("gato-decorativo");
 var instruc = document.getElementsByClassName("instrucciones");
 var conten = document.getElementById("mensaje");
 
+var clipboard = new Clipboard(".legend-msg");
+
 function run(){
     buttEncrip.onclick = encriptar;
     buttDesencrip.onclick = desencriptar;
+    buttCopy.onclick = copy;
 }
 
 function encriptar(){
@@ -123,9 +127,19 @@ function clear(){
     conten.style.fontSize = "16px";
     conten.style.top = "4%";
     conten.style.left = "5%";
+    buttCopy.style.display = "block";
 }
 function mostrar(texto){
     conten.textContent = texto;
 }
-
+function copy(){
+    // clipboard.on('succes', function(e){console.log("copiado");});
+    // clipboard.on('error', function(e){console.log("mal");});
+    // conten.focus;
+    // document.execCommand("SelectAll");
+    // document.execCommand("copy");
+    buttCopy.style.backgroundColor = "#0A3871";
+    buttCopy.style.color = "whitesmoke";
+    console.log("copiado....");
+}
 run();

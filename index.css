@@ -56,6 +56,9 @@ main {
     font-style: italic;
     border: none;
 }
+textarea::placeholder{
+    color: #0A3871;
+}
 .mostrar-txt {
     padding-top: 27%;
     position: absolute;
@@ -89,23 +92,21 @@ main {
     font-weight: normal;
     font-style: unset;
 }
-/* #txt-de-cifrado {
-    background-color: white;
-    position: absolute;
-    left: 73%;
-    text-align: center;
-    color: gray;
-} */
 section button{
+    position: absolute;
     color: white;
     font-size: 18px;
+    top: 85%;
     border-radius: 15px;
     background-color: #0A3871;
     font-weight: lighter;
+    border-width: 1px;
+    transition: 1s all;
+}
+section button:hover {
+    transform: scale(1.1);
 }
 .encrip {
-    position: absolute;
-    top: 85%;
     left: 10%;
     padding: .7% 8%;
 
@@ -114,10 +115,16 @@ section button{
     background-color: lightgray;
     border-color: #0A3871;
     color: #0A3871;
-    position: absolute;
-    top: 85%;
     left: 40%;
     padding: .7% 6.8%;
+}
+.copiar {
+    display: none;
+    background-color: whitesmoke;
+    color: #0A3871;
+    border-color: #0A3871;
+    left: 76.9%;
+    padding: .8% 7%;
 }
 .borde-inferior{
     display: none;
@@ -200,9 +207,6 @@ section button{
         max-height: 70%;
         border: none;
         
-    }
-    textarea::placeholder{
-        color: #0A3871;
     }
     #waring{
         top: 95%;

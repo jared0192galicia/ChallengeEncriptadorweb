@@ -17,12 +17,13 @@
         </header>
         <main>
             <section>
-                <textarea name="ingresar-txt" id="" cols="70" rows="17" 
+                <textarea name="ingresar-txt" cols="70" rows="17" 
                     class="ingresar-txt" placeholder="Ingrese su texto aquí"></textarea>
             </section>
             <section class="mostrar-txt">
                 <img src="image/GatoMercadoLibre1.png" alt="Imagen de gato" class="gato-decorativo">
-                <p class="legend-msg" id="mensaje">Ningún mensaje fue encontrado</p>
+                <p class="legend-msg" id="mensaje" data-clipboard-text="webos"
+                >Ningún mensaje fue encontrado</p>
                 <p class="instrucciones">Ingresa el texto que desees encriptar o desencriptar</p>
             </section>
         </main>
@@ -32,10 +33,12 @@
                 <p class="advertencia">Solo letras minusculas y sin acentos</p>
                 <button id="encrip" class="encrip">Encriptar</button>
                 <button id="desencrip" class="desencrip">Desencriptar</button>
+                <button id="copy" class="copiar">Copiar</button>
             </section>   
             <div class="borde-inferior">d</div>
         </footer>
     </div>
+    <script src="clipboard.js"></script>
     <script src="scrip.js"></script>
 </body>
 </html>
