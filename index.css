@@ -1,32 +1,32 @@
 /* Estilos de index */
 * {
-    background-color: gainsboro;
-    /* background-color: aliceblue; */
+    background-color:  #E5E5E5;
+    /* background-color: gainsboro; */
+}
+.contenedor{
+    width: 95%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+header {
+    width: 100%;
+    box-sizing: border-box;
 }
 #logo{
+    position: absolute;
+    left: 6%;
+    top: 3%;
     background-color: gainsboro;
-    margin-left: 80px;
-    margin-top: 30px;
 }
 section img{
     background-color: white;
     max-width: 285px;
     /* max-height: 250px; */
 }
-#muneco {
-    /* 3 usados para mov con todo y margen */
-    position: absolute;
-    top: 0px;
-    left: 75%;
-    height: 420px;
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 15px;
-    padding-top: 100px;
-    padding-bottom: 50px;
-    margin-right: 20px;
+main {
+    box-sizing: border-box;
 }
-
 #muneco h1{
     background-color: white;
     margin-top: 20px;
@@ -36,14 +36,66 @@ section img{
 }
 #waring{
     position: absolute;
-    top: 76%;
-    left: 16%;
+    top: 81%;
+    left: 10.5%;
 }
-section p{
+.advertencia{
     position: absolute;
-    top: 76%;
-    left: 18%;
+    top: 81%;
+    left: 12.4%;
 }
+.ingresar-txt{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    color: #0A3871;
+    text-align: left;
+    max-width: 50%;
+    max-height: 50%;
+    font-size: 22px;
+    font-style: italic;
+    border: none;
+}
+.mostrar-txt {
+    padding-top: 27%;
+    position: absolute;
+    top: 4%;
+    left: 76%;
+    min-width: 20%;
+    min-height: 34%;
+    max-width: 21%;
+    max-height: 35%;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+.gato-decorativo {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    max-width: 100%;
+}
+.legend-msg, .instrucciones{
+    background-color: whitesmoke;
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    font-size: 135%;
+    top: 60%;
+}
+.instrucciones{
+    top: 70%;
+    color: grey;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: unset;
+}
+/* #txt-de-cifrado {
+    background-color: white;
+    position: absolute;
+    left: 73%;
+    text-align: center;
+    color: gray;
+} */
 section button{
     color: white;
     font-size: 18px;
@@ -53,9 +105,9 @@ section button{
 }
 .encrip {
     position: absolute;
-    top: 80%;
-    left: 15%;
-    padding: 8px 100px;
+    top: 85%;
+    left: 10%;
+    padding: .7% 8%;
 
 }
 .desencrip {
@@ -63,7 +115,147 @@ section button{
     border-color: #0A3871;
     color: #0A3871;
     position: absolute;
-    top: 80%;
-    left: 45%;
-    padding: 8px 87px;
+    top: 85%;
+    left: 40%;
+    padding: .7% 6.8%;
+}
+.borde-inferior{
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .legend-msg, .instrucciones{
+        background-color: whitesmoke;
+        position: absolute;
+        font-weight: bold;
+        text-align: center;
+        font-size: 135%;
+        top: 60%;
+    }
+    .ingresar-txt{
+        top: 23%;
+        left: 5%;
+        max-width: 87%;
+        max-height: 80%;
+    }
+    #waring{
+        top: 109.8%;
+    }
+    .advertencia{
+        top: 110%;
+    }
+    .encrip {
+        top: 115%;
+        left: 15%;
+        padding: .7% 8%;
+    
+    }
+    .desencrip {
+        top: 115%;
+        left: 55%;
+        padding: .7% 6.8%;
+    }
+    .mostrar-txt {
+        margin-top: 5%;
+        margin-bottom: 10%; 
+        top: 120%;
+        left: 8%;
+        min-width: 69%;
+        max-width: 70%;
+        min-height: 10px;
+        padding: 8%;
+        border-radius: 22px;
+    }
+    .gato-decorativo{
+        display: none;
+    }
+    .legend-msg, .instrucciones{
+        top: 35%;
+        left: 26%;
+        font-size: 24px;
+        text-align: center;
+    }
+    .instrucciones{
+        top: 55%;
+        left: 20%;
+        font-size: 20px;
+        font-weight: normal;
+    }
+}
+/* CSS para dispositivo movil */
+@media screen and (max-width: 340px) {
+    .legend-msg, .instrucciones{
+        background-color: whitesmoke;
+        position: absolute;
+        font-weight: bold;
+        text-align: center;
+        font-size: 10px;
+        top: 60%;
+        display: none;
+    }
+    .ingresar-txt{
+        top: 20%;
+        left: 5%;
+        max-width: 87%;
+        max-height: 70%;
+        border: none;
+        
+    }
+    textarea::placeholder{
+        color: #0A3871;
+    }
+    #waring{
+        top: 95%;
+        left: 6%;
+    }
+    .advertencia{
+        top: 95.5%;
+        left: 13%;
+        font-size: 15px;
+    }
+    .encrip {
+        top: 100%;
+        left: 7%;
+        padding: 4% 30%;
+    
+    }
+    .desencrip {
+        top: 112%;
+        left: 7%;
+        padding: 4% 24.5%;
+    }
+    .mostrar-txt {
+        margin-top: 10%;
+        margin-bottom: 5%; 
+        top: 120%;
+        left: 8%;
+        min-width: 69%;
+        max-width: 70%;
+        min-height: 20%;
+        max-height: 21%;
+        /* padding-top: 8%*/
+        border-radius: 22px;
+    }
+    .gato-decorativo{
+        display: none;
+    }
+    .legend-msg, .instrucciones{
+        top: 35%;
+        left: 26%;
+        font-size: 24px;
+        text-align: center;
+    }
+    .instrucciones{
+        top: 55%;
+        left: 20%;
+        font-size: 20px;
+        font-weight: normal;
+    }
+    .borde-inferior{
+        display: block;
+        position: absolute;
+        top: 154%;
+        height: 10px;
+        color: #E5E5E5;
+    }
 }

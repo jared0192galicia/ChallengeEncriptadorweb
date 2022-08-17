@@ -3,30 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
     <title>Encriptador</title>
 </head>
 <body>
-    <header>
-        <section>
-            <img src="image/LogoAlura.png" alt="Logo de Alura" id="logo">
-        </section>
-    </header>
-    <main>
-        <section id="muneco">
-            <img src="image/Muñeco.png" alt="">
-            <h1>Ningún mensaje fue encontrado</h1>
-        </section>
-    </main>
-    <footer>
-        <section>
-            <img src="image/advertencia.png" alt="" id="waring">
-            <p>Solo letras minusculas y sin acentos</p>
-            <button class="encrip">Encriptar</button>
-            <button class="desencrip">Desencriptar</button>
-        </section>
-    </footer>
+    <div class="contenedor">
+        <header>
+            <section>
+                <img src="image/LogoAlura.png" alt="Logo de Alura" id="logo">
+            </section>
+        </header>
+        <main>
+            <section>
+                <textarea name="ingresar-txt" id="" cols="70" rows="17" 
+                    class="ingresar-txt" placeholder="Ingrese su texto aquí"></textarea>
+            </section>
+            <section class="mostrar-txt">
+                <img src="image/GatoMercadoLibre1.png" alt="Imagen de gato" class="gato-decorativo">
+                <p class="legend-msg">Ningún mensaje fue encontrado</p>
+                <p class="instrucciones">Ingresa el texto que desees encriptar o desencriptar</p>
+            </section>
+        </main>
+        <footer>
+            <section>
+                <img src="image/advertencia.png" alt="" id="waring">
+                <p class="advertencia">Solo letras minusculas y sin acentos</p>
+                <button class="encrip">Encriptar</button>
+                <button class="desencrip">Desencriptar</button>
+            </section>   
+            <div class="borde-inferior">d</div>
+        </footer>
+    </div>
 </body>
 </html>
