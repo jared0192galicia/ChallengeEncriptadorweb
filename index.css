@@ -145,7 +145,7 @@ section button:hover {
     display: none;
 }
 /* Diseño para tablet */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     .git-hub{
         left: 17%;
         max-width: 52px;
@@ -220,7 +220,7 @@ section button:hover {
     }
 }
 /* CSS para dispositivo movil */
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 450px) {
     .git-hub{
         left: 25%;
         max-width: 50px;
