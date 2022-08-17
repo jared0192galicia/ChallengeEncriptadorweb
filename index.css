@@ -238,14 +238,14 @@ section button:hover {
     }
     .encrip {
         top: 100%;
-        left: 7%;
+        left: 8.5%;
         padding: 4% 30%;
     
     }
     .desencrip {
         top: 112%;
-        left: 7%;
-        padding: 4% 24.5%;
+        left: 8.5%;
+        padding: 4% 26%;
     }
     .mostrar-txt {
         margin-top: 10%;
