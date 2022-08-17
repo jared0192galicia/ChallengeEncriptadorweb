@@ -19,6 +19,13 @@ header {
     top: 3%;
     background-color: gainsboro;
 }
+.git-hub{
+    background-color: #E5E5E5;
+    position: absolute;
+    top: 2.5%;
+    left: 11%;
+    max-width: 4%;
+}
 section img{
     background-color: white;
     max-width: 285px;
@@ -139,6 +146,10 @@ section button:hover {
 }
 /* Diseño para tablet */
 @media screen and (max-width: 800px) {
+    .git-hub{
+        left: 17%;
+        max-width: 52px;
+    }
     .legend-msg, .instrucciones{
         background-color: whitesmoke;
         position: absolute;
@@ -210,6 +221,10 @@ section button:hover {
 }
 /* CSS para dispositivo movil */
 @media screen and (max-width: 340px) {
+    .git-hub{
+        left: 25%;
+        max-width: 50px;
+    }
     .legend-msg, .instrucciones{
         background-color: whitesmoke;
         position: absolute;
