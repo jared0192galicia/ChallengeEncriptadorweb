@@ -8,6 +8,7 @@
     margin: 0 auto;
     box-sizing: border-box;
     overflow: hidden;
+    background-color: #E5E5E5;
 }
 header {
     width: 100%;
@@ -25,6 +26,13 @@ header {
     top: 2.5%;
     left: 11%;
     max-width: 4%;
+}
+#tema {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    background-color: rgb(20, 30, 80);
+    padding: .7% 5%;
 }
 section img{
     background-color: white;
@@ -275,7 +283,10 @@ section button:hover {
         border-radius: 22px;
     }
     .gato-decorativo{
-        display: none;
+        display: block;
+        max-width: 54%;
+        left: 22%;
+        top: 44%;
     }
     .legend-msg, .instrucciones{
         display: block;

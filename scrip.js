@@ -1,23 +1,34 @@
 // Encriptador
 
-var buttEncrip = document.getElementById('encrip');
-var buttDesencrip = document.getElementById("desencrip");
-var buttCopy = document.getElementById("copy");
+const buttEncrip = document.getElementById('encrip');
+const buttDesencrip = document.getElementById("desencrip");
+const buttCopy = document.getElementById("copy");
+const buttTema = document.getElementById("tema");
 
-var selection = window.getSelection();
+const conten = document.getElementById("mensaje");
+const gato = document.getElementsByClassName("gato-decorativo");
+const section = document.getElementsByClassName("mostrar-txt");
+const instruc = document.getElementsByClassName("instrucciones");
+const big = document.getElementsByClassName("contenedor");
+const messCont = document.getElementsByClassName("mostrar-txt");
+
 var range = document.createRange();
+var selection = window.getSelection();
+var tema = true;
 
-var section = document.getElementsByClassName("mostrar-txt");
-var gato = document.getElementsByClassName("gato-decorativo");
-var instruc = document.getElementsByClassName("instrucciones");
-var conten = document.getElementById("mensaje");
-
+/**
+ * It's a function that runs when the page loads, and it assigns functions to the buttons
+ */
 function run(){
     buttEncrip.onclick = encriptar;
     buttDesencrip.onclick = desencriptar;
     buttCopy.onclick = copy;
+    buttTema.onclick = changeTema;
 }
 
+/**
+ * It takes the text from the textarea, and then it replaces the vowels with the corresponding code
+ */
 function encriptar(){
     var texto = document.querySelector('textarea').value;
     var encriptado = "";
@@ -49,7 +60,7 @@ function encriptar(){
         clear();
         mostrar(encriptado);
     } else {
-        alert("Primero debes escribir algo. !Simio estupido¡");
+        alert("Primero debes escribir algo.");
     }
     
 }
@@ -60,72 +71,75 @@ function desencriptar(){
     var aux = "";
     var continua = false;
     var decifrado = true;
-    // Decifrado de mensaje
-    for (let i = 0; i < texto.length; i++) {
 
-        aux += texto[i];
+    if (texto != "") {
+        // Decifrado de mensaje
+        for (let i = 0; i < texto.length; i++) {
 
-        if(aux == "enter"){
-            desencriptado += "e";
-            aux = "";
-        } else if(aux == "imes"){
-            desencriptado += "i";
-            aux = "";
+            aux += texto[i];
 
-        } else if(aux == "ai"){
-            desencriptado += "a";
-            aux = "";
+            if(aux == "enter"){
+                desencriptado += "e";
+                aux = "";
+            } else if(aux == "imes"){
+                desencriptado += "i";
+                aux = "";
 
-        } else if(aux == "ober"){
-            desencriptado += "o";
-            aux = "";
+            } else if(aux == "ai"){
+                desencriptado += "a";
+                aux = "";
 
-        } else if(aux == "ufat"){
-            desencriptado += "u";
-            aux = "";
+            } else if(aux == "ober"){
+                desencriptado += "o";
+                aux = "";
 
-        } else {
-            
-            if (aux[0] == "e") {
-                continua = true;
-
-            } else if (aux[0] == "i") {
-                continua = true;
-
-            } else if (aux[0] == "a") {
-                continua = true;
-
-            } else if (aux[0] == "o") {
-                continua = true;
-
-            } else if (aux[0] == "u") {
-                continua = true;
+            } else if(aux == "ufat"){
+                desencriptado += "u";
+                aux = "";
 
             } else {
-                continua = false;
-            }
+                
+                if (aux[0] == "e") {
+                    continua = true;
 
-            if(!continua) {
-                desencriptado += aux;
-                aux = "";
+                } else if (aux[0] == "i") {
+                    continua = true;
+
+                } else if (aux[0] == "a") {
+                    continua = true;
+
+                } else if (aux[0] == "o") {
+                    continua = true;
+
+                } else if (aux[0] == "u") {
+                    continua = true;
+
+                } else {
+                    continua = false;
+                }
+
+                if(!continua) {
+                    desencriptado += aux;
+                    aux = "";
+                }
+                
             }
-            
         }
-    }
-    
-    clear();
-    // Validacion palabra real
-    if (aux == "") {
-        mostrar(desencriptado);
-        console.log("palabra: " + desencriptado);
-    } else {
-        mostrar(texto);
-        console.log("palabra: " + texto);
-    }
-    console.log("aux: " + aux);
-    // alert("desencriptaado");
         
-
+        clear();
+        // Validacion palabra real
+        if (aux == "") {
+            mostrar(desencriptado);
+            console.log("palabra: " + desencriptado);
+        } else {
+            mostrar(texto);
+            console.log("palabra: " + texto);
+        }
+        console.log("aux: " + aux);
+        // alert("desencriptaado");
+    } else {
+        alert("Primero debes escribir algo.");
+    }
 }
 
 function clear(){
@@ -140,8 +154,12 @@ function clear(){
     buttCopy.style.display = "block";
 }
 function mostrar(texto){
-    conten.textContent = texto;
+    conten.textContent = te
+    xto;
 }
+/**
+ * It copies the content of the div with the id of "conten"
+ */
 function copy(){
     range.selectNodeContents(conten);
     selection.removeAllRanges();
@@ -152,6 +170,9 @@ function copy(){
     }
     
 }
+/**
+ * It changes the background color of the button to blue and the text to white.
+ */
 function copySuccessfull(){
     buttCopy.style.backgroundColor = "#0A3871";
     buttCopy.style.color = "whitesmoke";
@@ -162,4 +183,12 @@ function copyDefault(){
     buttCopy.style.color = "#0A3871";
     console.log("restablecido");
 }
+function changeTema(){
+    var txt = document.querySelector('textarea');
+    messCont[0].style.backgroundColor = "rgb(10, 30, 40)";
+    big[0].style.backgroundColor = "black";
+    txt.style.backgroundColor = "rgb(35, 35, 35)";
+    gato.style.backgroundColor = "rgb(35, 35, 35)"
+} 
+
 run();
