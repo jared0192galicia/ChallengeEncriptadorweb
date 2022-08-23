@@ -11,7 +11,9 @@ const section = document.getElementsByClassName("mostrar-txt");
 const instruc = document.getElementsByClassName("instrucciones");
 const big = document.getElementsByClassName("contenedor");
 const messCont = document.getElementsByClassName("mostrar-txt");
-
+const background = document.getElementsByClassName("text-area");
+const logoAlura = document.getElementById("logo");
+const gitHub = document.getElementsByClassName("git-hub");
 var range = document.createRange();
 var selection = window.getSelection();
 var tema = true;
@@ -154,8 +156,7 @@ function clear(){
     buttCopy.style.display = "block";
 }
 function mostrar(texto){
-    conten.textContent = te
-    xto;
+    conten.textContent = texto;
 }
 /**
  * It copies the content of the div with the id of "conten"
@@ -184,11 +185,42 @@ function copyDefault(){
     console.log("restablecido");
 }
 function changeTema(){
-    var txt = document.querySelector('textarea');
-    messCont[0].style.backgroundColor = "rgb(10, 30, 40)";
-    big[0].style.backgroundColor = "black";
-    txt.style.backgroundColor = "rgb(35, 35, 35)";
-    gato.style.backgroundColor = "rgb(35, 35, 35)"
+    if (tema) {
+        background[0].style.width = "120%";
+        // background[0].style.height = "10%";
+        background[0].style.backgroundColor = "rgb(10, 30, 40)";
+        var txt = document.querySelector('textarea');
+        messCont[0].style.backgroundColor = "rgb(10, 30, 40)";
+        // big[0].style.backgroundColor = "black";
+        txt.style.backgroundColor = "rgb(35, 35, 35)";
+        gato[0].style.backgroundColor = "rgb(10, 30, 40)";
+        conten.style.color = "whitesmoke";
+        conten.style.backgroundColor = "rgb(10, 30, 40)";
+        instruc[0].style.backgroundColor = "rgb(10, 30, 40)";
+        instruc[0].style.color = "whitesmoke";
+        gitHub[0].style.backgroundColor = "rgb(10, 30, 40)";
+        logoAlura.style.backgroundColor = "rgb(10, 30, 40)";
+
+        tema = !tema;
+    } else {
+        var txt = document.querySelector('textarea');
+        background[0].style.width = "120%";
+        // background[0].style.height = "10%";
+        background[0].style.backgroundColor = "#F5F5F5";
+        messCont[0].style.backgroundColor = "whitesmoke";
+        // big[0].style.backgroundColor = "black";
+        txt.style.backgroundColor = "#F5F5F5";
+        gato[0].style.backgroundColor = "whitesmoke";
+        conten.style.color = "black";
+        conten.style.backgroundColor = "whitesmoke";
+        instruc[0].style.backgroundColor = "whitesmoke";
+        instruc[0].style.color = "black";
+        gitHub[0].style.backgroundColor = "#F5F5F5";
+        logoAlura.style.backgroundColor = "#F5F5F5"
+        
+        tema = !tema;
+    }
+    
 } 
 
 run();

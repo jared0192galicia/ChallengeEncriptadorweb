@@ -5,10 +5,9 @@
 }
 .contenedor{
     width: 95%;
-    margin: 0 auto;
     box-sizing: border-box;
     overflow: hidden;
-    background-color: #E5E5E5;
+    background-color: #e5e5e5;
 }
 header {
     width: 100%;
@@ -58,6 +57,13 @@ main {
     position: absolute;
     top: 81%;
     left: 12.4%;
+}
+.text-area{
+    display: inline-block;
+    padding: 0 auto;
+    width: 500px;
+    height: 99.5vh;
+    /* background-color: cadetblue; */
 }
 .ingresar-txt{
     position: absolute;
