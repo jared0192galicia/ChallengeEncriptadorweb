@@ -2,14 +2,19 @@
 * {
     background-color:  #E5E5E5;
     /* background-color: gainsboro; */
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
 }
 .contenedor{
-    width: 95%;
+    width: 100% !important;
     box-sizing: border-box;
     overflow: hidden;
     background-color: #e5e5e5;
 }
-header {
+header { 
     width: 100%;
     box-sizing: border-box;
 }
@@ -43,18 +48,29 @@ main {
 }
 #muneco h1{
     background-color: white;
-    margin-top: 20px;
-    font-size: 22px;
+    margin-top: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
     text-align: center;
 }
-#waring{
+.fa-solid {
+    left: 5%;
+    font-size: 1.8rem;
+    top: 85%;
+}
+#waring, .fa-solid {
     position: absolute;
     top: 81%;
     left: 10.5%;
 }
-.advertencia{
+#warning::before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 22px;
+    content: '\f06a  ';
+}
+.advertencia {
     position: absolute;
+    font-size: 1.7rem;
     top: 81%;
     left: 12.4%;
 }
@@ -62,7 +78,7 @@ main {
     display: inline-block;
     padding: 0 auto;
     width: 500px;
-    height: 99.5vh;
+    height: 100vh;
     /* background-color: cadetblue; */
 }
 .ingresar-txt{
@@ -104,12 +120,13 @@ textarea::placeholder{
     position: absolute;
     font-weight: bold;
     text-align: center;
-    font-size: 135%;
+    font-size: 2.2rem;
     top: 60%;
 }
 .instrucciones{
     top: 70%;
     color: grey;
+    text-align: center;
     font-size: 15px;
     font-weight: normal;
     font-style: unset;
@@ -117,7 +134,7 @@ textarea::placeholder{
 section button{
     position: absolute;
     color: white;
-    font-size: 18px;
+    font-size: 1.8rem;
     top: 85%;
     border-radius: 15px;
     background-color: #0A3871;
@@ -181,7 +198,7 @@ section button:hover {
     #waring{
         top: 109.8%;
     }
-    .advertencia{
+    .advertencia {
         top: 110%;
     }
     .encrip {

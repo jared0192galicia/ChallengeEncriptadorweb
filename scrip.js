@@ -4,6 +4,8 @@ const buttEncrip = document.getElementById('encrip');
 const buttDesencrip = document.getElementById("desencrip");
 const buttCopy = document.getElementById("copy");
 const buttTema = document.getElementById("tema");
+const warning = document.getElementById('warning');
+const htmlMain = document.getElementById('html-main');
 
 const conten = document.getElementById("mensaje");
 const gato = document.getElementsByClassName("gato-decorativo");
@@ -169,7 +171,6 @@ function copy(){
     if(successfull){
         copySuccessfull();
     }
-    
 }
 /**
  * It changes the background color of the button to blue and the text to white.
@@ -200,7 +201,10 @@ function changeTema(){
         instruc[0].style.color = "whitesmoke";
         gitHub[0].style.backgroundColor = "rgb(10, 30, 40)";
         logoAlura.style.backgroundColor = "rgb(10, 30, 40)";
-
+        htmlMain.style.backgroundColor = "rgb(10, 30, 40)";
+        warning.style.backgroundColor = "rgb(10, 30, 40)";
+        warning.style.color = "rgb(225, 225, 225)";
+        // section[0].style.backgroundColor = "rgb(20, 40, 50)";
         tema = !tema;
     } else {
         var txt = document.querySelector('textarea');
